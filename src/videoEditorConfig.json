@@ -1,0 +1,109 @@
+{
+  "projects": [
+    {
+      "projectID": "123",
+      "name": "Project Name 1",
+      "path": "/assets/videos/video1.mp4",
+      "assets": [
+        {
+          "assetTd": "1",
+          "name": "video3.mp4",
+          "path": "/assets/videos/video3.mp4",
+          "type": "video"
+        },
+        {
+          "assetTd": "2",
+          "name": "video4.mp4",
+          "path": "/assets/videos/video4.mp4",
+          "type": "video"
+        },
+        {
+          "assetTd": "3",
+          "name": "video5.mp4",
+          "path": "/assets/videos/video5.mp4",
+          "type": "video"
+        },
+        {
+          "assetTd": "4",
+          "name": "christoph.jpg",
+          "path": "/assets/images/christoph.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "5",
+          "name": "grigorii.jpg",
+          "path": "/assets/images/grigorii-shcheglov.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "6",
+          "name": "eberhard.jpg",
+          "path": "/assets/images/eberhard-grossgasteiger.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "7",
+          "name": "kevin.jpg",
+          "path": "/assets/images/kevin-bessat.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "projectID": "124",
+      "name": "Project Name 2",
+      "path": "/assets/videos/video2.mp4",
+      "assets": [
+        {
+          "assetTd": "1",
+          "name": "christoph.jpg",
+          "path": "/assets/images/christoph.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "2",
+          "name": "video4.mp4",
+          "path": "/assets/videos/video4.mp4",
+          "type": "video"
+        },
+        {
+          "assetTd": "3",
+          "name": "grigorii.jpg",
+          "path": "/assets/images/grigorii-shcheglov.jpg",
+          "type": "image"
+        }
+      ]
+    },
+    {
+      "projectID": "125",
+      "name": "Project Name 3",
+      "path": "/assets/videos/video3.mp4",
+      "assets": [
+        {
+          "assetTd": "1",
+          "name": "eberhard.jpg",
+          "path": "/assets/images/eberhard-grossgasteiger.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "2",
+          "name": "christoph.jpg",
+          "path": "/assets/images/christoph.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "3",
+          "name": "grigorii.jpg",
+          "path": "/assets/images/grigorii-shcheglov.jpg",
+          "type": "image"
+        },
+        {
+          "assetTd": "4",
+          "name": "kevin.jpg",
+          "path": "/assets/images/kevin-bessat.jpg",
+          "type": "image"
+        }
+      ]
+    }
+  ]
+}
