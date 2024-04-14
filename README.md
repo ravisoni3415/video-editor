@@ -1,3 +1,19 @@
+# VideoEditor
+
+**Pages**
+
+1. Main Dashborad
+2. Project Edit Page
+
+**Screenshots**
+
+1. Home Page
+   ![](/assets/screenshots/home.png)
+
+2. Edit Page
+   ![](/assets/screenshots/Edit.png)
+   ![](/assets/screenshots/Edit2.png)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
