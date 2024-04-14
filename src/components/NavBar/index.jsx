@@ -4,6 +4,23 @@ import { FaPlus } from "react-icons/fa";
 
 import styled from "styled-components";
 
+const NavBar = () => {
+  return (
+    <NavContainer>
+      <Logo href="/">LOGO</Logo>
+      <NavLink to="/new-video">
+        New Video
+        <Icon>
+          <FaPlus />
+        </Icon>
+      </NavLink>
+      <NavLink to="/home">Home</NavLink>
+      <NavLink to="/template">Template</NavLink>
+      <NavLink to="/all-videos">All Videos</NavLink>
+    </NavContainer>
+  );
+};
+
 const NavContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -23,7 +40,7 @@ const NavLink = styled(Link)`
   text-decoration: none;
   color: #333;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  font-weight: 600;
+  font-weight: 500;
   &:hover {
     background-color: #f0f0f0;
   }
@@ -31,7 +48,7 @@ const NavLink = styled(Link)`
 
 const Logo = styled.a`
   font-size: 1.5rem;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   color: #333;
   user-select: none;
@@ -41,22 +58,5 @@ const Icon = styled.span`
   margin-left: 5px;
   line-height: 0;
 `;
-
-const NavBar = () => {
-  return (
-    <NavContainer>
-      <Logo href="/">LOGO</Logo>
-      <NavLink to="/new-video">
-        New Video
-        <Icon>
-          <FaPlus />
-        </Icon>
-      </NavLink>
-      <NavLink to="/home">Home</NavLink>
-      <NavLink to="/template">Template</NavLink>
-      <NavLink to="/all-videos">All Videos</NavLink>
-    </NavContainer>
-  );
-};
 
 export default NavBar;

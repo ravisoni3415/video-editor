@@ -15,11 +15,11 @@ const Main = ({ path }) => {
         <GiArrowCursor />
         <FaRegHandPaper />
         <FaCrop />
-        <Select>
+        <Select defaultValue="50%">
           <option>Select</option>
-          <option selected>50%</option>
-          <option>75%</option>
-          <option>100%</option>
+          <option value="50%">50%</option>
+          <option value="75%">75%</option>
+          <option value="100%">100%</option>
         </Select>
       </InnerFlex>
       <Video
@@ -49,7 +49,7 @@ const InnerFlex = styled.div`
 `;
 
 const Select = styled.select`
-  font-weight: 600;
+  font-weight: 500;
   height: 30px;
 `;
 

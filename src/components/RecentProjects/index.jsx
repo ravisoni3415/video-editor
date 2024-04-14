@@ -1,5 +1,5 @@
 import React from "react";
-import VideoEditorConfig from "../../videoEditorConfig.json";
+import VideoEditorConfig from "../../data/videoEditorConfig.json";
 import { useNavigate } from "react-router-dom";
 import Video from "../Common/Video";
 
@@ -27,6 +27,7 @@ const RecentVideos = () => {
               key={config.projectID}
               config={config}
               handleVideoClick={navigateToProject}
+              alignitem="flex-start"
               width="320"
               height="180"
             />

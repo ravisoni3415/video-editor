@@ -1,11 +1,8 @@
 import React from "react";
 import Video from "../Common/Video";
-import Audio from "../Audio";
 import Image from "../Common/Image";
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
-import { FaList } from "react-icons/fa6";
-import { FaPlusSquare } from "react-icons/fa";
-
+import { FaList, FaPlusSquare } from "react-icons/fa";
 import styled from "styled-components";
 
 const Assets = ({ assets, handleOnClick }) => {
@@ -28,17 +25,6 @@ const Assets = ({ assets, handleOnClick }) => {
                   controls
                 />
               );
-            } else if (asset.type === "audio") {
-              return (
-                <Audio
-                  key={asset.assetTd}
-                  config={asset}
-                  handleAudioClick={handleOnClick}
-                  height="200px"
-                  width="200px"
-                  controls
-                />
-              );
             } else if (asset.type === "image") {
               return (
                 <Image
@@ -54,8 +40,8 @@ const Assets = ({ assets, handleOnClick }) => {
           })}
         </Container>
       </OuterContainer>
-      <Flex justifycontent="flex-end">
-        <Flex justifycontent="space-between" width="50%">
+      <Flex $justifycontent="flex-end">
+        <Flex $justifycontent="space-between" $width="50%">
           <FaPlusSquare />
           <InnerFlex>
             <BsFillGrid3X3GapFill />
@@ -87,8 +73,8 @@ const Title = styled.h2`
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  justify-content: ${(props) => props.justifycontent || "center"};
-  width: ${(props) => props.width};
+  justify-content: ${(props) => props.$justifycontent || "center"};
+  width: ${(props) => props.$width};
 
   & > svg {
     height: 20px;
@@ -116,6 +102,7 @@ const Container = styled.main`
   grid-template-columns: repeat(2, 1fr);
   overflow-y: auto;
   overflow-x: hidden;
+  margin-top: 20px;
 `;
 
 export default Assets;

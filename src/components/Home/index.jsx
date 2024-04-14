@@ -95,7 +95,7 @@ const ActionButton = styled.button`
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   padding-inline: 10px;
-  font-weight: 600;
+  font-weight: 500;
 
   &:hover {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);

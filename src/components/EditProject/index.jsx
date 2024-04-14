@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { FaRotateLeft, FaRotateRight } from "react-icons/fa6";
 import { MdOutlineContentCut } from "react-icons/md";
@@ -15,7 +15,7 @@ import {
 } from "react-icons/bs";
 import Slider from "../Common/Slider";
 import Editor from "../Editor";
-import VideoEditorConfig from "../../videoEditorConfig.json";
+import VideoEditorConfig from "../../data/videoEditorConfig.json";
 
 import styled from "styled-components";
 
@@ -56,14 +56,20 @@ const EditProject = () => {
       <BottomContainer>
         <BorderTop />
         <Flex>
-          <BsSkipBackwardCircle style={{ height: "30px", width: "30px" }} />
-          <BsPlayCircle style={{ height: "40px", width: "40px" }} />
-          <BsSkipForwardCircle style={{ height: "30px", width: "30px" }} />
+          <IconWrapper $height="30px" $width="30px">
+            <BsSkipBackwardCircle />
+          </IconWrapper>
+          <IconWrapper $height="40px" $width="40px">
+            <BsPlayCircle />
+          </IconWrapper>
+          <IconWrapper $height="30px" $width="30px">
+            <BsSkipForwardCircle />
+          </IconWrapper>
           <Slider showLabel={false} showValue={false} />
           00:00 / 00:00
         </Flex>
         <BorderTop />
-        <Flex>
+        <Flex $justifycontent="flex-start">
           <FaRotateLeft />
           <FaRotateRight />
           <MdOutlineContentCut />
@@ -86,15 +92,15 @@ const VerticleFlex = styled.div`
 
 const MainContainer = styled.main`
   display: flex;
-  height: 75vh;
+  height: 70vh;
 `;
 
 const Flex = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: ${(props) => props.$justifycontent || "center"};
   gap: 20px;
-  margin-block: 5px;
+  margin: 5px 20px;
 `;
 
 const Wrapper = styled.div`
@@ -117,12 +123,19 @@ const Wrapper = styled.div`
 const BottomContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 25vh;
+  height: 30vh;
 `;
 
 const BorderTop = styled.div`
   margin-block: 0px;
   border-top: 1px solid lightgray;
+`;
+
+const IconWrapper = styled.div`
+  & > svg {
+    height: ${(props) => props.$height};
+    width: ${(props) => props.$width};
+  }
 `;
 
 export default EditProject;

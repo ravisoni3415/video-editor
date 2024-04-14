@@ -32,12 +32,13 @@ const Flex = styled.div`
   justify-content: end;
 `;
 
-const Label = styled.h4`
+const Label = styled.p`
   margin: 0;
   width: 80px;
+  font-weight: 400;
 `;
 
-const Value = styled.h4`
+const Value = styled.p`
   margin: 0;
   border: 1px solid;
   height: 30px;
@@ -45,6 +46,7 @@ const Value = styled.h4`
   min-width: 60px;
   justify-content: center;
   align-items: center;
+  font-weight: 400;
 `;
 
 const InputRange = styled.input`

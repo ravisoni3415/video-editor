@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { BsFillUnlockFill } from "react-icons/bs";
+
 import styled from "styled-components";
 
 const Editor = () => {
@@ -38,7 +39,7 @@ const Editor = () => {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    ctx.lineWidth = 2;
+    ctx.lineWidth = 1;
     ctx.strokeStyle = "rgb(0, 0, 0)";
     ctx.beginPath();
 
@@ -61,40 +62,38 @@ const Editor = () => {
   };
 
   return (
-    <>
-      <OuterFlex>
-        <InnerFlex>
-          <Wrapper></Wrapper>
-          <Wrapper>
-            <p>Track 2</p>
-            <InnerFlex>
-              <FaEye />
-              <BsFillUnlockFill />
-            </InnerFlex>
-          </Wrapper>
-          <Wrapper>
-            <p>Track 1</p>
-            <InnerFlex>
-              <FaEye />
-              <BsFillUnlockFill />
-            </InnerFlex>
-          </Wrapper>
-        </InnerFlex>
-        <InnerFlex>
-          <RulerContainer>
-            {[...Array(numberOfMarks)].map((_, index) => (
-              <RulerMark
-                key={index}
-                height={getHeight(index + 1)}
-                index={index}
-              />
-            ))}
-          </RulerContainer>
-          <Wrapper></Wrapper>
-          <Canvas id="waveform"></Canvas>
-        </InnerFlex>
-      </OuterFlex>
-    </>
+    <OuterFlex>
+      <InnerFlex>
+        <Wrapper /> {/* To show empty row added empty Wrapper */}
+        <Wrapper>
+          <p>Track 2</p>
+          <InnerFlex>
+            <FaEye />
+            <BsFillUnlockFill />
+          </InnerFlex>
+        </Wrapper>
+        <Wrapper>
+          <p>Track 1</p>
+          <InnerFlex>
+            <FaEye />
+            <BsFillUnlockFill />
+          </InnerFlex>
+        </Wrapper>
+      </InnerFlex>
+      <InnerFlex>
+        <RulerContainer>
+          {[...Array(numberOfMarks)].map((_, index) => (
+            <RulerMark
+              key={index}
+              $height={getHeight(index + 1)}
+              $index={index}
+            />
+          ))}
+        </RulerContainer>
+        <Wrapper></Wrapper>
+        <Canvas id="waveform"></Canvas>
+      </InnerFlex>
+    </OuterFlex>
   );
 };
 
@@ -120,7 +119,7 @@ const Wrapper = styled.div`
   & > p {
     width: 90%;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
   }
   & > div {
     width: 10%;
@@ -150,11 +149,11 @@ const RulerContainer = styled.div`
 
 const RulerMark = styled.div`
   width: 1px;
-  height: ${(props) => props.height}px;
+  height: ${(props) => props.$height}px;
   background-color: #000;
   position: absolute;
   top: 0;
-  left: ${(props) => props.index * 10}px;
+  left: ${(props) => props.$index * 10}px;
 `;
 
 export default Editor;

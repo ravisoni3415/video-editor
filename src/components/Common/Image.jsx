@@ -27,7 +27,7 @@ const Figure = styled.figure`
 `;
 
 const Title = styled.p`
-  font-weight: 600;
+  font-weight: 400;
   margin: 0;
 `;
 
