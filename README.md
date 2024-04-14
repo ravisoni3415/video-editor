@@ -8,11 +8,11 @@
 **Screenshots**
 
 1. Home Page
-   ![](/assets/screenshots/home.png)
+   ![](./public/assets/screenshots/Home.png)
 
 2. Edit Page
-   ![](/assets/screenshots/Edit.png)
-   ![](/assets/screenshots/Edit2.png)
+   ![](./public/assets/screenshots/Edit.png)
+   ![](./public/assets/screenshots/Edit2.png)
 
 # React + Vite
 
